@@ -42,7 +42,8 @@ export async function getGames(): Promise<Game[]> {
 
         for (const imageFile of imageFiles) {
             const imagePath = path.join(gamePath, imageFile);
-            const relativePath = `/gallery/${gameTitle}/${imageFile}`;
+            const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+            const relativePath = `${basePath}/gallery/${gameTitle}/${imageFile}`;
 
             // Check for corresponding text file
             const txtFile = imageFile.replace(/\.(jpg|jpeg|png|webp)$/i, '.txt');

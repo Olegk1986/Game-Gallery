@@ -46,9 +46,10 @@ const initAudio = async () => {
         }
     };
 
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
     await Promise.all([
-        loadBuffer("/audio/hover.wav", "hover"),
-        loadBuffer("/audio/click.wav", "click"),
+        loadBuffer(`${basePath}/audio/hover.wav`, "hover"),
+        loadBuffer(`${basePath}/audio/click.wav`, "click"),
     ]);
 };
 
