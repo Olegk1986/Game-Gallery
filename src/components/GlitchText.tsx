@@ -59,7 +59,7 @@ export default function GlitchText({ text, className }: GlitchTextProps) {
             className={`${className} ${isHovered ? "font-mono" : ""}`}
             onMouseEnter={startGlitch}
             onMouseLeave={stopGlitch}
-            style={{ display: "inline-block", minWidth: "max-content" }} // Prevent layout shift
+            style={{ display: "inline-block", minWidth: "max-content", pointerEvents: "none" }} // Prevent layout shift
         >
             {displayText}
         </span>
