@@ -210,4 +210,10 @@ svg {
   /* Ensure hardware acceleration context */
   transform: translate3d(0, 0, 0);
   will-change: transform, filter;
+  cursor: none !important;
+}
+
+/* Enforce cursor none on main content wrapper */
+main {
+  cursor: none !important;
 }
